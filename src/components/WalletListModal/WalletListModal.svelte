@@ -30,4 +30,4 @@
   })
 </script>
 
-<Modal bind:open toggle>List of wallets here</Modal>
+<Modal bind:open>List of wallets here</Modal>
