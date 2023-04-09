@@ -5,26 +5,27 @@ import { CoinbaseWalletConnector } from '@wagmi/core/connectors/coinbaseWallet'
 import { WalletConnectConnector } from '@wagmi/core/connectors/walletConnect'
 import { MetaMaskConnector } from '@wagmi/core/connectors/metaMask'
 import {
-  L1_CHAIN_ID,
-  L1_CHAIN_NAME,
-  L1_RPC,
-  L1_EXPLORER_URL,
-  L2_CHAIN_ID,
-  L2_CHAIN_NAME,
-  L2_RPC,
-  L2_EXPLORER_URL,
+  PUBLIC_L1_CHAIN_ID,
+  PUBLIC_L1_CHAIN_NAME,
+  PUBLIC_L1_RPC,
+  PUBLIC_L1_EXPLORER_URL,
+  PUBLIC_L2_CHAIN_ID,
+  PUBLIC_L2_CHAIN_NAME,
+  PUBLIC_L2_RPC,
+  PUBLIC_L2_EXPLORER_URL,
 } from '$env/static/public'
 
 const chainIdToRpcUrl = {
-  [L1_CHAIN_ID]: L1_RPC,
-  [L2_CHAIN_ID]: L2_RPC,
+  [PUBLIC_L1_CHAIN_ID]: PUBLIC_L1_RPC,
+  [PUBLIC_L2_CHAIN_ID]: PUBLIC_L2_RPC,
 }
-const mainnetRpcUrls = { http: [L1_RPC] }
-const taikoRpcUrls = { http: [L2_RPC] }
+
+const mainnetRpcUrls = { http: [PUBLIC_L1_RPC] }
+const taikoRpcUrls = { http: [PUBLIC_L2_RPC] }
 
 const mainnet: Chain = {
-  id: L1_CHAIN_ID,
-  name: L1_CHAIN_NAME,
+  id: parseInt(PUBLIC_L1_CHAIN_ID),
+  name: PUBLIC_L1_CHAIN_NAME,
   network: 'Mainnet',
   nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
   rpcUrls: {
@@ -34,14 +35,14 @@ const mainnet: Chain = {
   blockExplorers: {
     default: {
       name: 'Main',
-      url: L1_EXPLORER_URL,
+      url: PUBLIC_L1_EXPLORER_URL,
     },
   },
 }
 
 const taiko: Chain = {
-  id: L2_CHAIN_ID,
-  name: L2_CHAIN_NAME,
+  id: parseInt(PUBLIC_L2_CHAIN_ID),
+  name: PUBLIC_L2_CHAIN_NAME,
   network: 'Taiko',
   nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
   rpcUrls: {
@@ -51,7 +52,7 @@ const taiko: Chain = {
   blockExplorers: {
     default: {
       name: 'Taiko',
-      url: L2_EXPLORER_URL,
+      url: PUBLIC_L2_EXPLORER_URL,
     },
   },
 }
