@@ -19,6 +19,7 @@
     "autoprefixer": "^10.4.14",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-svelte3": "^4.0.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.0",
@@ -32,8 +33,12 @@
   },
   "type": "module",
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "@wagmi/core": "^0.10.8",
+    "classnames": "^2.3.2",
     "daisyui": "^2.51.5",
-    "ethers": "^6.2.3"
+    "ethers": "^6.2.3",
+    "events": "^3.3.0",
+    "svelte-i18n": "^3.6.0"
   }
 }

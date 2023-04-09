@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { _ } from '../../libs/i18n'
+  import Button from '../Button'
+  import { open } from '../WalletListModal'
 </script>
 
-<button>Connect your wallet</button>
+<Button on:click={open} type="primary">{$_('connect_button')}</Button>
